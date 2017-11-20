@@ -15,7 +15,7 @@ export const typeOf = (val: any): string => {
   else if (typeof val === 'string') {
     return 'string';
   }
-  else if (typeof value === 'object' && Array.isArray(val)) {
+  else if (typeof val === 'object' && Array.isArray(val)) {
     return 'array';
   }
   return val.constructor.name.toLowerCase();
