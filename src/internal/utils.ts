@@ -5,8 +5,18 @@ export const hasProp = (obj: any, name: string): boolean => obj.hasOwnProperty(n
 export const typeOf = (val: any): string => {
   if (val === undefined) {
     return 'undefined';
-  } else if (val === null) {
+  }
+  else if (val === null) {
     return 'null';
+  }
+  else if (val === false || val === true) {
+    return 'boolean';
+  }
+  else if (typeof val === 'string') {
+    return 'string';
+  }
+  else if (typeof value === 'object' && Array.isArray(val)) {
+    return 'array';
   }
   return val.constructor.name.toLowerCase();
 };
