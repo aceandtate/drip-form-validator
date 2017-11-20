@@ -21,8 +21,7 @@
     "docs:api": "typedoc --excludeExternals --excludePrivate --exclude '**/+(rules|normalizers|locale)/**/*.ts' --out _book/api/ src/",
     "docs:watch": "npm run docs:prepare && gitbook serve",
     "docs:publish": "npm run docs && gh-pages -t -d _book",
-    "prepublish": "npm run build",
-    "prepare": "npm run prebuild && npm run build"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
